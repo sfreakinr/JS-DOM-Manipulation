@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Manipulation Assignment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <h2>Daily Quote</h2>
+    <p id="quote">Placeholder text for quote</p>
+
+    <div class="info-box">Name: John</div>
+    <div class="info-box">Hobby: Reading</div>
+    <div class="info-box">Occupation: Engineer</div>
+
+    <ul>
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+        <li>Task 4</li>
+        <li>Task 5</li>
+    </ul>
+
+    <footer><span>Powered by Subin Raj's Webpage</span></footer>
+
+    <script>
+        // 1. Change the text content of the paragraph with ID 'quote' to your favorite quote
+        document.getElementById('quote').textContent = 'വിജയം എടുക്കാൻ ഉള്ള വഴി പരാജയത്തിലൂടെയാണ് കടന്നുപോകുന്നത്';
+
+        // 2. Change background color of all 'info-box' class divs
+        const infoBoxes = document.getElementsByClassName('info-box');
+        for (let i = 0; i < infoBoxes.length; i++) {
+            infoBoxes[i].style.backgroundColor = '#adeac9'; 
+        }
+
+        // 3. Update the third list item in the task list to a different text
+        const taskItems = document.getElementsByTagName('li');
+        taskItems[2].textContent = 'This task has been updated using JS';
+
+        // 4. Append the message -"Have a great day" to the footer span using querySelector
+        const footerSpan = document.querySelector('footer span');
+        footerSpan.textContent += ' - Have a great day!';
+
+    </script>
 </body>
 </html>
